@@ -1,0 +1,13 @@
+<participant name="RepeatedRegion_End">
+		<translator>
+			<searchPatterns>
+				<searchPattern><![CDATA[/\{\{\/section/i]]></searchPattern>
+				<!--searchPattern requiredLocation="leading"><![CDATA[/\bsection\sname="(\w+)"\sloop=\$?(\w+)/i]]></searchPattern-->
+			</searchPatterns>
+			<translations>
+				<translation whereToSearch="directive" translationType="tabbed region end">
+					<closeTag>MM_REPEATEDREGION</closeTag>
+				</translation>
+			</translations>
+		</translator>
+</participant>

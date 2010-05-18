@@ -1,0 +1,12 @@
+<participant name="EndIf">
+  <translator priority=400>
+    <searchPatterns>
+      <searchPattern><![CDATA[/\{\{\/if/]]></searchPattern>
+    </searchPatterns>
+    <translations>
+		<translation whereToSearch="directive" translationType="tabbed region end">
+			<closeTag>MM_HIDDENREGION</closeTag>
+		</translation>
+    </translations>
+  </translator>
+</participant>

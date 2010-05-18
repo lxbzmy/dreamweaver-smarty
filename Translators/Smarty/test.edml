@@ -1,0 +1,14 @@
+<participant name="Smarty var">
+		<translator priority=407>
+			<searchPatterns>
+				<searchPattern><![CDATA[/123/i]]></searchPattern>
+			</searchPatterns>
+			<translations>
+				<translation whereToSearch="tag+DIV" limitSearch="attribute+id" translationType="dynamic data">
+					<attributes>
+						<attribute><![CDATA[mmTranslatedValue="outline=123"]]></attribute>
+					</attributes>
+				</translation>
+			</translations>
+		</translator>
+</participant>

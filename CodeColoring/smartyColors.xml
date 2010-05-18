@@ -1,0 +1,12 @@
+<codeColors>
+	<colorGroup>
+		<syntaxColor id="CodeColor_PHPSmartyBlock" text="#FF0000" bold="true" />
+		<syntaxColor id="CodeColor_PHPSmartyComment" text="#FF9900" />
+		<syntaxColor id="CodeColor_PHPSmartyConstant" text="#552200" />
+		<syntaxColor id="CodeColor_PHPSmartyString" text="#CC0000" />
+		<syntaxColor id="CodeColor_PHPSmartyFunctionsKeywords" text="#0000FF" />
+		<syntaxColor id="CodeColor_PHPSmartyReserved" text="#006600" />
+		<syntaxColor id="CodeColor_PHPSmartyTypes" text="#009999" />
+		<syntaxColor id="CodeColor_PHPSmartyVariables" text="#0066FF" />
+	</colorGroup>
+</codeColors>
