@@ -1,0 +1,44 @@
+<codeColoring xmlns:MMString="http://www.macromedia.com/schemes/data/string/">
+	<scheme name="PHPSmarty" id="PHPSmarty" priority="20" >
+		<ignoreCase>No</ignoreCase>
+		<ignoreTags>Yes</ignoreTags>
+		<defaultText name="PHPSmartyDefaultText" id="CodeColor_PHPSmartyDefaultText" />
+		<blockStart name="PHPSmartyBLOCK" id="CodeColor_PHPSmartyBlock" scheme="customText" doctypes="Smarty,HTML,XML"><![CDATA[{{]]></blockStart>
+		<blockEnd><![CDATA[}}]]></blockEnd>
+		<commentStart name="PHPSmartyComment" id="CodeColor_PHPSmartyComment"><![CDATA[{{*]]></commentStart>
+		<commentEnd><![CDATA[*}}]]></commentEnd>
+		<stringStart name="CodeColor_PHPSmartyString" id="CodeColor_PHPSmartyString"><![CDATA["]]></stringStart>
+		<stringEnd><![CDATA["]]></stringEnd>
+		<stringStart><![CDATA[']]></stringStart>
+		<stringEnd><![CDATA[']]></stringEnd>
+		<stringEsc><![CDATA[\]]></stringEsc>
+		<brackets name="PHPSmartyBracket" id="CodeColor_PHPSmartyBracket"><![CDATA[{[()]}]]></brackets>
+		<operators name="PHPSmartyOperator" id="CodeColor_PHPSmartyOperator"><![CDATA[+-*/%<>!?:=~^`.&|]]></operators>
+		<numbers name="CodeColor_PHPSmartyNumber" id="CodeColor_PHPSmartyNumber" />
+		<idChar1>$_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</idChar1>
+		<idCharRest name="CodeColor_PHPSmartyIdentifier" id="CodeColor_PHPSmartyIdentifier">_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</idCharRest>
+		<functionKeyword name="CodeColor_PHPSmartyFunction" id="CodeColor_PHPSmartyFunction">function</functionKeyword>
+		<keywords id="CodeColor_PHPSmartyOperator">
+			<keyword>and</keyword>
+			<keyword>or</keyword>
+			<keyword>xor</keyword>
+		</keywords>
+		<keywords MMString:name="CodeColoring/CodeColor_Types" id="CodeColor_PHPSmartyTypes">
+			<keyword>array</keyword>
+			
+		</keywords>
+		<keywords MMString:name="CodeColoring/CodeColor_Variables" id="CodeColor_PHPSmartyVariables">
+			<keyword>$argc</keyword>
+		</keywords>
+
+		<keywords name="CodeColor_PHPSmartyFunctionsKeywords" id="CodeColor_PHPSmartyFunctionsKeywords">
+			<keyword>if</keyword>
+			<keyword>else</keyword>
+			<keyword>foreach</keyword>
+			<keyword>include</keyword>
+			<keyword>section</keyword>
+			<keyword>rdelim</keyword>
+			<keyword>ldelim</keyword>
+		</keywords>
+	</scheme>
+</codeColoring>

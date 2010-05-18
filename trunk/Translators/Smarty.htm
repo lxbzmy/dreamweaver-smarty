@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Smarty Include Tag Translator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+
+/**
+ * This translator will only work on this format:
+ * {include file="foo.tpl"}
+ * filename must surrounded by double or single quotes
+ * if 'assign' or '[var]' attribute exists, it will not tranlated
+ * the include tag must be in one line
+ * extra spaces are allowed, e.g. { include file = " foo.tpl " }
+ * all templates file suppose to stay in the same top 'templates' folder
+ * you can include subfolder in the include tag
+ * all other formats will be displayed as a simple 'inc' icon
+ */
+
+/**
+ * define smarty delimiters
+*/
+
+var LDELIM = "{{";
+var RDELIM = "}}";
+
+
+function getTranslatorInfo()
+{
+	var transArray = new Array(6);
+	transArray[0] = "SMARTY_INCLUDE";
+	transArray[1] = "Smarty Include Translator";
+	transArray[2] = "0";
+	transArray[3] = "1";
+	transArray[4] = LDELIM + "[ \t]*include";
+	transArray[5] = "byExpression";
+	return transArray; 
+}
+
+function translateMarkup( docNameStr, siteRootStr, inStr )
+{
+
+	var pos = 0;
+	var patternFound = false;
+	var outStr = '';
+	var depPath = '';
+	var remainInStr = inStr;
+	smartyRegExp = new RegExp("(" + LDELIM + "[ \t]*include[ \t]+file[ \t]*=[ \t]*[\"|'][ \t]*([^\"^']*)[ \t]*[\"|']+([^}]*)" + RDELIM + ")", "im");
+	while ((pos = remainInStr.search(smartyRegExp)) >= 0)
+	{
+		var matchStr = RegExp.$1;
+		var templateFileName = RegExp.$2;
+		var templateFullName = templateFileName;
+		var smartyFile;
+		outStr += remainInStr.substr(0, pos);
+		smartyFile = new File(templateFullName, docNameStr);
+		if (smartyFile.exists())
+		{
+			smartyContent = smartyFile.getContents();
+			if (smartyContent.length <= 0)
+			{
+				// this is an empty file
+				smartyContent = "&nbsp;";
+			}
+			depPath = smartyFile.getAbsolutePath();
+		}
+		else
+		{
+			// file doesn't exist
+			smartyContent = "File Error!";
+		}
+		
+		// Do translation
+		outStr += '<MM:BeginLock translatorClass="' + getTranslatorInfo()[0] + '" type="smartyInclude" orig="' + escape(matchStr) + '"';
+		if (depPath.length > 0)
+			outStr += ' depFiles="' + depPath + '"';
+		outStr += '>' + smartyContent + '<MM:EndLock>';
+		
+		// Re-search text following match
+		remainInStr = remainInStr.substring(pos + matchStr.length);
+		// Remember that at least one translation was performed
+		patternFound = true;
+	}
+	outStr += remainInStr;
+	return patternFound ? outStr : "";
+}
+</script>
+</head>
+<body>
+</body>
+</html>

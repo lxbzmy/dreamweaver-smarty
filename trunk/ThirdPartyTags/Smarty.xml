@@ -1,0 +1,10 @@
+<tagspec tag_name="smarty" start_string="{{" end_string="}}" detect_in_attribute="true" icon="smartytags/smarty.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_if" start_string="{{if" end_string="}}" detect_in_attribute="true" icon="smartytags/if.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_else" start_string="{{else" end_string="}}" detect_in_attribute="true" icon="smartytags/else.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_ifend" start_string="{{/if" end_string="}}" detect_in_attribute="true" icon="smartytags/if_end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_counter" start_string="{{counter" end_string="}}" detect_in_attribute="true" icon="smartytags/N.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_sec" start_string="{{section" end_string="}}" detect_in_attribute="true" icon="smartytags/sec.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_secend" start_string="{{/section" end_string="}}" detect_in_attribute="true" icon="smartytags/sec_end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_secvariable" start_string="{{%" end_string="%}}" detect_in_attribute="true" icon="smartytags/percent.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_variable" start_string="{{$" end_string="}}" detect_in_attribute="true" icon="smartytags/dollar.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="smarty_inc" start_string="{{include" end_string="}}" detect_in_attribute="true" icon="smartytags/inc.gif" icon_width="18" icon_height="18"></tagspec>
